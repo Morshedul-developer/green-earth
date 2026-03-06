@@ -12,7 +12,26 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <h1 class="text-6xl">Green Earth</h1>
+  <body class="bg-[#DCFCE7]">
+    <main class="max-w-7xl mx-auto">
+        <h2 class="text-center text-[32px] font-semibold mb-10">Choose Your Trees</h2>
+        <section class="grid grid-cols-12 gap-8 pb-28">
+            <!-- Categories -->
+            <div id="category-container" class="col-span-3 space-y-4">
+                <h2 class="text-[20px] font-semibold">Categories</h2>
+
+                <div>
+                    <button class="btn btn-success w-full justify-start">All Trees</button>
+                </div>
+            </div>
+            <!-- Trees -->
+            <div class="col-span-6 bg-amber-200">Cards</div>
+            <!-- Cart -->
+            <div class="col-span-3 bg-amber-200">Cart</div>
+        </section>
+    </main>
+
+    <!-- script -->
+     <script src="./script.js"></script>
   </body>
 </html>
