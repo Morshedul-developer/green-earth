@@ -38,6 +38,14 @@ const loadTrees = async () => {
   displayTrees(data.plants);
 };
 
+
+const removeActive = () => {
+    const btnAll = document.querySelectorAll(".btn-category");
+    btnAll.forEach(btn=>{
+        btn.classList.add("btn-outline");
+    })
+}
+
 const displayTrees = (trees) => {
   trees.forEach((tree) => {
     const div = document.createElement("div");
@@ -67,13 +75,6 @@ const displayTrees = (trees) => {
     hideSpinner();
   });
 };
-
-const removeActive = () => {
-    const btnAll = document.querySelectorAll(".btn-category");
-    btnAll.forEach(btn=>{
-        btn.classList.add("btn-outline");
-    })
-}
 
 const addActive = (btn) => {
     btn.classList.remove("btn-outline");
