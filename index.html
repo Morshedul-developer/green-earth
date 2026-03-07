@@ -23,13 +23,25 @@
           <h2 class="text-[20px] font-semibold">Categories</h2>
 
           <div>
-            <button class="btn btn-success w-full justify-start">
+            <button id="btn-all" class="btn btn-success w-full justify-start">
               All Trees
             </button>
           </div>
         </div>
         <!-- Trees -->
-        <div id="trees-container" class="col-span-8 card card-body p-4 bg-white shadow-2xl grid grid-cols-1 sm:grid-cols-3 gap-4">
+         <div class="col-span-8 card card-body p-4 bg-white shadow-2xl">
+        <div
+          id="trees-container"
+          class=" grid grid-cols-1 sm:grid-cols-3 gap-4"
+        >
+        </div>
+        <!-- spinner -->
+          <div
+            id="spinner"
+            class="hidden justify-center"
+          >
+            <span class="loading loading-bars loading-xl"></span>
+          </div>
         </div>
         <!-- Cart -->
         <div class="col-span-2 bg-amber-200">Cart</div>
