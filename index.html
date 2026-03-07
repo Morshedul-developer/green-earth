@@ -14,24 +14,29 @@
   </head>
   <body class="bg-[#DCFCE7]">
     <main class="max-w-7xl mx-auto">
-        <h2 class="text-center text-[32px] font-semibold mb-10">Choose Your Trees</h2>
-        <section class="grid grid-cols-12 gap-8 pb-28">
-            <!-- Categories -->
-            <div id="category-container" class="col-span-3 space-y-4">
-                <h2 class="text-[20px] font-semibold">Categories</h2>
+      <h2 class="text-center text-[32px] font-semibold mb-10">
+        Choose Your Trees
+      </h2>
+      <section class="grid grid-cols-12 gap-5 pb-28">
+        <!-- Categories -->
+        <div id="category-container" class="col-span-2 space-y-4">
+          <h2 class="text-[20px] font-semibold">Categories</h2>
 
-                <div>
-                    <button class="btn btn-success w-full justify-start">All Trees</button>
-                </div>
-            </div>
-            <!-- Trees -->
-            <div class="col-span-6 bg-amber-200">Cards</div>
-            <!-- Cart -->
-            <div class="col-span-3 bg-amber-200">Cart</div>
-        </section>
+          <div>
+            <button class="btn btn-success w-full justify-start">
+              All Trees
+            </button>
+          </div>
+        </div>
+        <!-- Trees -->
+        <div id="trees-container" class="col-span-8 card card-body p-4 bg-white shadow-2xl grid grid-cols-1 sm:grid-cols-3 gap-4">
+        </div>
+        <!-- Cart -->
+        <div class="col-span-2 bg-amber-200">Cart</div>
+      </section>
     </main>
 
     <!-- script -->
-     <script src="./script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
