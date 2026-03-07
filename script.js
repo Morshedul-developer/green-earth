@@ -17,16 +17,24 @@ const loadCategories = async () => {
         removeActive();
         btnAll.classList.add("btn-outline")
         addActive(btn);
-        
+        loadTreesWithCategories(category.id);
     }
 });
 };
+
+const loadTreesWithCategories = async (id) => {
+    showSpinner();
+    const res = await fetch(`https://openapi.programming-hero.com/api/category/${id}`);
+    const data = await res.json();
+    treesContainer.innerHTML = '';
+    displayTrees(data.plants);
+}
 
 const loadTrees = async () => {
   showSpinner();
   const res = await fetch("https://openapi.programming-hero.com/api/plants");
   const data = await res.json();
-  hideSpinner();
+  treesContainer.innerHTML = '';
   displayTrees(data.plants);
 };
 
@@ -56,6 +64,7 @@ const displayTrees = (trees) => {
             </div>
     `;
     treesContainer.append(div);
+    hideSpinner();
   });
 };
 
@@ -84,6 +93,7 @@ btnAll.addEventListener('click', () => {
     removeActive();
     btnAll.classList.remove("btn-outline");
     btnAll.classList.add("btn-success");
+    loadTrees();
 })
 
 loadCategories();
